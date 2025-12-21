@@ -713,3 +713,9 @@ textarea:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* căn giữa ngang */
+  text-align: center;
+}

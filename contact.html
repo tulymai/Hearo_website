@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Liên hệ – Tâm An</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="page-content">
+      <!-- Hero Section -->
+      <section class="contact-hero">
+        <div class="container">
+          <span class="eyebrow">LIÊN HỆ</span>
+          <h1 class="hero-title">
+            Chúng mình luôn sẵn sàng<br />lắng nghe bạn
+          </h1>
+          <p class="hero-subtitle">
+            Có câu hỏi, góp ý hoặc muốn hợp tác? Gửi tin nhắn cho chúng mình,<br />
+            chúng mình sẽ phản hồi trong vòng 24-48 giờ.
+          </p>
+          <div class="quick-contact">
+            <a href="mailto:hello@taman.vn" class="quick-link">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>hello@taman.vn</span>
+            </a>
+            <a href="https://t.me/tamanpodcast" class="quick-link">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"
+                />
+              </svg>
+              <span>@tamanpodcast</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <section class="section contact-section">
+        <div class="container">
+          <div class="contact-layout">
+            <!-- Left: Forms -->
+            <div class="contact-main">
+              <!-- Contact Form -->
+              <div class="form-card">
+                <div class="card-header">
+                  <div>
+                    <h2>Gửi tin nhắn</h2>
+                    <p>Chúng mình sẽ phản hồi sớm nhất có thể</p>
+                  </div>
+                </div>
+
+                <form
+                  class="contact-form"
+                  onsubmit="handleContactSubmit(event)"
+                >
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="name">Tên của bạn *</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="Nguyễn Văn A"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="email">Email *</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="example@email.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="subject">Chủ đề</label>
+                    <select id="subject" name="subject">
+                      <option value="">Chọn chủ đề...</option>
+                      <option value="feedback">💬 Góp ý về podcast</option>
+                      <option value="collaboration">🤝 Hợp tác</option>
+                      <option value="question">❓ Câu hỏi</option>
+                      <option value="suggestion">💡 Đề xuất chủ đề</option>
+                      <option value="other">📌 Khác</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message">Nội dung tin nhắn *</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="6"
+                      required
+                      placeholder="Viết tin nhắn của bạn..."
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-large">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <line x1="22" y1="2" x2="11" y2="13" />
+                      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                    Gửi tin nhắn
+                  </button>
+                </form>
+              </div>
+
+              <!-- Story Form -->
+              <div class="form-card story-card">
+                <div class="card-header">
+                  <div>
+                    <h2>Gửi câu chuyện của bạn</h2>
+                    <p>Chia sẻ ẩn danh • Có thể xuất hiện trong podcast</p>
+                  </div>
+                </div>
+
+                <div class="story-info">
+                  <div class="info-item">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    <span>100% ẩn danh</span>
+                  </div>
+                  <div class="info-item">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg>
+                    <span>Chỉ team đọc</span>
+                  </div>
+                  <div class="info-item">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Không phán xét</span>
+                  </div>
+                </div>
+
+                <form class="story-form" onsubmit="handleStorySubmit(event)">
+                  <textarea
+                    rows="10"
+                    name="story"
+                    required
+                    placeholder="Hôm nay bạn đang cảm thấy như thế nào? Điều gì đang khiến bạn lo lắng hoặc mệt mỏi?&#10;&#10;Bạn có thể chia sẻ:&#10;• Cảm xúc hiện tại&#10;• Tình huống bạn đang gặp&#10;• Điều bạn muốn tâm sự&#10;&#10;Chúng mình sẽ giữ bí mật tuyệt đối."
+                  ></textarea>
+                  <button type="submit" class="btn btn-secondary btn-large">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      />
+                    </svg>
+                    Gửi câu chuyện
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Right: Sidebar -->
+            <aside class="contact-sidebar">
+              <!-- Contact Info -->
+              <div class="info-card">
+                <h3>Thông tin liên hệ</h3>
+
+                <div class="contact-item">
+                  <div>
+                    <h4>Email</h4>
+                    <a href="mailto:hello@taman.vn">hello@taman.vn</a>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div>
+                    <h4>Telegram</h4>
+                    <a href="https://t.me/tamanpodcast">@tamanpodcast</a>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div>
+                    <h4>Mạng xã hội</h4>
+                    <div class="social-links">
+                      <a
+                        href="https://facebook.com/tamanpodcast"
+                        target="_blank"
+                      >
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                          />
+                        </svg>
+                        Facebook
+                      </a>
+                      <a
+                        href="https://instagram.com/tamanpodcast"
+                        target="_blank"
+                      >
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <rect
+                            x="2"
+                            y="2"
+                            width="20"
+                            height="20"
+                            rx="5"
+                            ry="5"
+                          />
+                          <path
+                            d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                          />
+                          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                        Instagram
+                      </a>
+                      <a
+                        href="https://tiktok.com/@tamanpodcast"
+                        target="_blank"
+                      >
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"
+                          />
+                        </svg>
+                        TikTok
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Response Time -->
+              <div class="info-card highlight">
+                <h3>Thời gian phản hồi</h3>
+                <p>
+                  Chúng mình thường phản hồi trong vòng
+                  <strong>24-48 giờ</strong>
+                  (trừ cuối tuần và ngày lễ).
+                </p>
+              </div>
+
+              <!-- Collaboration -->
+              <div class="info-card">
+                <h3>Hợp tác với Tâm An</h3>
+                <p>Chúng mình mở cho các cơ hội:</p>
+                <ul class="collab-list">
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Mời đến sự kiện</span>
+                  </li>
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Tài trợ podcast</span>
+                  </li>
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Hợp tác nội dung</span>
+                  </li>
+                  <li>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Guest trên podcast</span>
+                  </li>
+                </ul>
+                <p class="collab-note">
+                  Vui lòng chọn <strong>"Hợp tác"</strong> trong form hoặc email
+                  với tiêu đề rõ ràng.
+                </p>
+              </div>
+
+              <!-- FAQ -->
+              <div class="info-card faq-card">
+                <h3>Câu hỏi thường gặp</h3>
+
+                <details>
+                  <summary>Tâm An có tư vấn tâm lý trực tiếp không?</summary>
+                  <p>
+                    Tâm An là podcast và cộng đồng, không thay thế dịch vụ trị
+                    liệu chuyên nghiệp. Chúng mình có thể giới thiệu bạn đến các
+                    nhà tâm lý học uy tín.
+                  </p>
+                </details>
+
+                <details>
+                  <summary>Làm sao để tham gia ghi âm podcast?</summary>
+                  <p>
+                    Hãy gửi câu chuyện qua form bên trái hoặc email. Nếu câu
+                    chuyện phù hợp, chúng mình sẽ liên hệ lại để thu âm (online
+                    hoặc offline).
+                  </p>
+                </details>
+
+                <details>
+                  <summary>Podcast có phí không?</summary>
+                  <p>
+                    Podcast hoàn toàn miễn phí. Chỉ có Premium membership
+                    (99k/tháng) mới có phí để truy cập nội dung độc quyền.
+                  </p>
+                </details>
+
+                <details>
+                  <summary>Tôi có thể đề xuất chủ đề không?</summary>
+                  <p>
+                    Có! Chúng mình rất muốn nghe ý kiến từ cộng đồng. Hãy gửi đề
+                    xuất qua form với chủ đề "Đề xuất chủ đề".
+                  </p>
+                </details>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <!-- Column 1 -->
+        <div class="footer-col">
+          <h4>Tâm An Podcast</h4>
+          <p>
+            Không gian lắng nghe và chữa lành cho người trẻ Việt Nam. Mỗi tuần
+            một câu chuyện về sức khỏe tinh thần.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-col">
+          <h4>Nội dung</h4>
+          <a href="index.html">Trang chủ</a>
+          <a href="episodes.html">Podcast</a>
+          <a href="courses.html">Khóa học</a>
+          <a href="about.html">Về Tâm An</a>
+          <a href="community.html">Cộng đồng</a>
+          <a href="contact.html">Liên hệ</a>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Chính sách bảo mật</a>
+          <a href="#">Điều khoản sử dụng</a>
+          <a href="#">Hướng dẫn đăng ký</a>
+          <a href="#">Hotline: 1800-6013</a>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-col">
+          <h4>Đăng ký tin</h4>
+          <p>Nhận tips chăm sóc sức khỏe tinh thần mỗi tuần.</p>
+          <form class="footer-newsletter" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="Email của bạn" required />
+            <button type="submit" class="btn-footer-subscribe">Đăng ký</button>
+          </form>
+          <p class="footer-note">Miễn phí. Hủy bất cứ lúc nào.</p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© 2025 Tâm An Podcast. Made with 💚 in Vietnam.</p>
+        <p class="footer-disclaimer">
+          Nếu gặp khủng hoảng tâm lý, gọi: <strong>1800-6013</strong> (miễn phí
+          24/7).
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

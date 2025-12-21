@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cộng đồng – Tâm An</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/community.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="page-content">
+      <!-- Hero Section -->
+      <section class="community-hero">
+        <div class="container">
+          <span class="eyebrow">CỘNG ĐỒNG TÂM AN</span>
+          <h1 class="hero-title">Bạn không cô đơn<br />trên hành trình này</h1>
+          <p class="hero-subtitle">
+            Tham gia cộng đồng người trẻ Việt cùng quan tâm đến sức khỏe tinh
+            thần.<br />
+            Kết nối, chia sẻ và cùng nhau phát triển.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-pill">
+              <span class="stat-icon"></span>
+              <span>500+ thành viên</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-icon"></span>
+              <span>1K+ tin nhắn/tuần</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-icon"></span>
+              <span>4.9/5 đánh giá</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="section newsletter-section">
+        <div class="container">
+          <div class="newsletter-card">
+            <div class="card-icon"></div>
+            <div class="card-content">
+              <h2>Tâm thư cuối tuần</h2>
+              <p class="card-subtitle">
+                Miễn phí • Mỗi Chủ Nhật • Hủy bất cứ lúc nào
+              </p>
+
+              <div class="benefits-grid">
+                <div class="benefit-item">
+                  <span class="benefit-icon"></span>
+                  <div>
+                    <strong>Tóm tắt podcast</strong><br />
+                    <small>2 tập mới nhất trong tuần</small>
+                  </div>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon"></span>
+                  <div>
+                    <strong>Câu chuyện ngắn</strong><br />
+                    <small>Về sức khỏe tinh thần</small>
+                  </div>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-icon"></span>
+                  <div>
+                    <strong>Bài tập thực hành</strong><br />
+                    <small>Áp dụng ngay trong tuần</small>
+                  </div>
+                </div>
+              </div>
+
+              <form
+                class="newsletter-form"
+                onsubmit="handleNewsletterSignup(event)"
+              >
+                <input
+                  type="email"
+                  placeholder="Nhập email của bạn"
+                  required
+                  class="form-input-large"
+                />
+                <button type="submit" class="btn btn-primary btn-large">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 2L11 13" />
+                    <path d="M22 2l-7 20-4-9-9-4 20-7z" />
+                  </svg>
+                  Đăng ký miễn phí
+                </button>
+              </form>
+
+              <p class="form-note">
+                ✓ Đã có <strong>2,000+</strong> người đăng ký
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Premium Section -->
+      <section class="premium-section">
+        <div class="container">
+          <div class="premium-header">
+            <span class="premium-badge"> Premium</span>
+            <h2>Tâm An Premium</h2>
+            <p>Trải nghiệm đầy đủ với nội dung độc quyền và cộng đồng riêng</p>
+          </div>
+
+          <div class="premium-grid">
+            <!-- Premium Card -->
+            <div class="premium-card featured">
+              <div class="premium-card-header">
+                <div>
+                  <h3>Premium Monthly</h3>
+                  <p class="premium-desc">Dùng thử không rủi ro</p>
+                </div>
+              </div>
+
+              <div class="premium-features">
+                <div class="feature-item">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  <span
+                    ><strong>Tập bonus chuyên sâu</strong> với chuyên gia tâm
+                    lý</span
+                  >
+                </div>
+                <div class="feature-item">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  <span
+                    ><strong>Thư viện thiền dẫn</strong>: thiền ngủ, giảm lo âu,
+                    body scan</span
+                  >
+                </div>
+                <div class="feature-item">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  <span
+                    ><strong>Workbook PDF</strong>: journaling, checklist, kế
+                    hoạch 7–21 ngày</span
+                  >
+                </div>
+                <div class="feature-item">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  <span
+                    ><strong>Nhóm cộng đồng riêng</strong> (Telegram/Discord) để
+                    hỏi đáp</span
+                  >
+                </div>
+                <div class="feature-item">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  <span><strong>Workshop/meetup offline</strong> (khi có)</span>
+                </div>
+                <div class="feature-item">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  <span
+                    ><strong>Ad-free experience</strong> không quảng cáo</span
+                  >
+                </div>
+              </div>
+
+              <div class="premium-pricing">
+                <div class="price-display">
+                  <span class="price-amount">99,000₫</span>
+                  <span class="price-period">/tháng</span>
+                </div>
+                <p class="price-note">≈ 3,300₫/ngày • Hủy bất cứ lúc nào</p>
+              </div>
+
+              <button class="btn btn-premium btn-large">
+                Đăng ký dùng thử (sắp ra mắt)
+              </button>
+            </div>
+
+            <!-- Free Card for comparison -->
+            <div class="premium-card">
+              <div class="premium-card-header">
+                <div>
+                  <h3>Free</h3>
+                  <p class="premium-desc">Miễn phí mãi mãi</p>
+                </div>
+              </div>
+
+              <div class="premium-features">
+                <div class="feature-item">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  <span>Tất cả tập podcast chính</span>
+                </div>
+                <div class="feature-item">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  <span>Tâm thư cuối tuần</span>
+                </div>
+                <div class="feature-item">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  <span>Show notes & transcript</span>
+                </div>
+                <div class="feature-item disabled">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                  <span>Tập bonus</span>
+                </div>
+                <div class="feature-item disabled">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                  <span>Cộng đồng riêng</span>
+                </div>
+              </div>
+
+              <div class="premium-pricing">
+                <div class="price-display">
+                  <span class="price-amount">0₫</span>
+                </div>
+              </div>
+
+              <a href="episodes.html" class="btn btn-ghost btn-large">
+                Nghe ngay
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Group Info -->
+      <section class="section community-group-section">
+        <div class="container">
+          <div class="group-info-card">
+            <div class="group-icon">
+              <svg
+                width="80"
+                height="80"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h2>Nhóm cộng đồng riêng</h2>
+            <p class="group-subtitle">
+              Nhóm Telegram/Discord riêng sẽ được mở khi đạt
+              <strong>1.000 người nghe thường xuyên</strong><br />
+              hoặc có thể tham gia ngay nếu bạn là
+              <strong>thành viên Premium</strong>.
+            </p>
+
+            <div class="group-benefits">
+              <div class="group-benefit-item">
+                <div class="benefit-icon-large"></div>
+                <h3>Hỏi đáp trực tiếp</h3>
+                <p>Hỏi đáp với host và các thành viên khác trong cộng đồng</p>
+              </div>
+              <div class="group-benefit-item">
+                <div class="benefit-icon-large"></div>
+                <h3>Chia sẻ câu chuyện</h3>
+                <p>Không gian an toàn để chia sẻ câu chuyện của bạn</p>
+              </div>
+              <div class="group-benefit-item">
+                <div class="benefit-icon-large"></div>
+                <h3>Workshop & Meetup</h3>
+                <p>Tham gia workshop/meetup offline (khi có)</p>
+              </div>
+            </div>
+
+            <div class="progress-card">
+              <div class="progress-info">
+                <span class="progress-label">Tiến độ mở nhóm công khai</span>
+                <span class="progress-value">500 / 1,000 người</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 50%"></div>
+              </div>
+              <p class="progress-note">Còn 500 người nữa là mở nhóm!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section testimonials-section">
+        <div class="container">
+          <h2 class="section-title">Cộng đồng nói gì về Tâm An</h2>
+
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <p class="testimonial-text">
+                "Tâm thư cuối tuần giúp mình có thói quen reflection mỗi Chủ
+                Nhật. Cảm ơn team đã tạo ra content chất lượng và free!"
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">👤</div>
+                <div>
+                  <div class="author-name">Minh Anh</div>
+                  <div class="author-role">Sinh viên • Hà Nội</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <p class="testimonial-text">
+                "Premium membership đáng giá từng đồng. Các tập bonus với chuyên
+                gia và workbook PDF giúp mình áp dụng cụ thể hơn rất nhiều."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">👤</div>
+                <div>
+                  <div class="author-name">Tuấn Anh</div>
+                  <div class="author-role">Marketing • TP.HCM</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <p class="testimonial-text">
+                "Nhóm cộng đồng rất wholesome. Mọi người đều rất support và
+                không phán xét. Cảm giác như tìm thấy một gia đình tinh thần."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">👤</div>
+                <div>
+                  <div class="author-name">Thu Hà</div>
+                  <div class="author-role">Designer • Đà Nẵng</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section faq-section">
+        <div class="container">
+          <h2 class="section-title">Câu hỏi thường gặp</h2>
+
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Tôi có thể hủy Premium bất cứ lúc nào không?</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </div>
+              <div class="faq-answer">
+                Có! Bạn có thể hủy bất cứ lúc nào. Không có cam kết dài hạn. Nếu
+                hủy, bạn vẫn có quyền truy cập Premium đến hết chu kỳ thanh
+                toán.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span
+                  >Tôi có cần tài khoản để nghe podcast miễn phí không?</span
+                >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </div>
+              <div class="faq-answer">
+                Không cần! Tất cả tập podcast chính đều miễn phí và không cần
+                đăng ký. Chỉ cần đăng ký email nếu muốn nhận Tâm thư cuối tuần.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Nhóm cộng đồng có phí không?</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </div>
+              <div class="faq-answer">
+                Nhóm công khai (khi đạt 1,000 người) sẽ miễn phí. Nhóm Premium
+                riêng dành cho thành viên trả phí với nhiều quyền lợi độc quyền
+                hơn.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <!-- Column 1 -->
+        <div class="footer-col">
+          <h4>Tâm An Podcast</h4>
+          <p>
+            Không gian lắng nghe và chữa lành cho người trẻ Việt Nam. Mỗi tuần
+            một câu chuyện về sức khỏe tinh thần.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-col">
+          <h4>Nội dung</h4>
+          <a href="index.html">Trang chủ</a>
+          <a href="episodes.html">Podcast</a>
+          <a href="courses.html">Khóa học</a>
+          <a href="about.html">Về Tâm An</a>
+          <a href="community.html">Cộng đồng</a>
+          <a href="contact.html">Liên hệ</a>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Chính sách bảo mật</a>
+          <a href="#">Điều khoản sử dụng</a>
+          <a href="#">Hướng dẫn đăng ký</a>
+          <a href="#">Hotline: 1800-6013</a>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-col">
+          <h4>Đăng ký tin</h4>
+          <p>Nhận tips chăm sóc sức khỏe tinh thần mỗi tuần.</p>
+          <form class="footer-newsletter" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="Email của bạn" required />
+            <button type="submit" class="btn-footer-subscribe">Đăng ký</button>
+          </form>
+          <p class="footer-note">Miễn phí. Hủy bất cứ lúc nào.</p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© 2025 Tâm An Podcast. Made with 💚 in Vietnam.</p>
+        <p class="footer-disclaimer">
+          Nếu gặp khủng hoảng tâm lý, gọi: <strong>1800-6013</strong> (miễn phí
+          24/7).
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

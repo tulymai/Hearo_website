@@ -65,6 +65,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .header-left {

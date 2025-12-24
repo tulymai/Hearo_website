@@ -445,3 +445,87 @@
     gap: 8px;
   }
 }
+/* ========================================
+   COURSE PRICING SECTION
+======================================== */
+
+.course-price-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 12px;
+  background: rgba(34, 197, 94, 0.08);
+  gap: 20px;
+}
+
+.course-price-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.price-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.course-price-vnd {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.price-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.btn-enroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #022c22;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn-enroll:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+}
+
+.btn-enroll svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .course-price-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .course-price-vnd {
+    font-size: 1.5rem;
+  }
+
+  .btn-enroll {
+    width: 100%;
+    justify-content: center;
+  }
+}

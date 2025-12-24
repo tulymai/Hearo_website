@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khóa học của tôi - Hearo Podcast</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/student-portal.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <div id="student-nav-placeholder"></div>
+    <main class="portal-main">
+      <div class="container">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+          <div class="welcome-content">
+            <h1>
+              Chào mừng trở lại, <span class="user-name">Phương Anh</span>! 👋
+            </h1>
+            <p>Tiếp tục hành trình chữa lành của bạn hôm nay</p>
+          </div>
+          <div class="streak-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+              />
+            </svg>
+            <div>
+              <strong>7 ngày</strong>
+              <span>Streak học liên tục</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Progress Overview -->
+        <section class="progress-overview">
+          <div class="progress-card">
+            <div class="progress-header">
+              <h3>Tiến độ học tập</h3>
+              <span class="progress-percent">33%</span>
+            </div>
+            <div class="progress-bar-large">
+              <div class="progress-fill" style="width: 33%"></div>
+            </div>
+            <div class="progress-stats">
+              <div class="stat">
+                <span class="number">7</span>
+                <span class="label">Bài hoàn thành</span>
+              </div>
+              <div class="stat">
+                <span class="number">14</span>
+                <span class="label">Bài còn lại</span>
+              </div>
+              <div class="stat">
+                <span class="number">2h 45m</span>
+                <span class="label">Thời gian học</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- My Courses -->
+        <section class="my-courses">
+          <h2>Khóa học của tôi</h2>
+
+          <div class="courses-grid">
+            <!-- Active Course -->
+            <div class="course-card active">
+              <div class="course-thumbnail">
+                <img
+                  src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=600&h=400&fit=crop"
+                  alt="Course"
+                />
+                <div class="course-badge active-badge">Đang học</div>
+                <div
+                  class="play-overlay"
+                  onclick="window.location.href='lesson-viewer.html?lesson=7'"
+                >
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+              <div class="course-info">
+                <h3>21 ngày quản lý lo âu</h3>
+                <p class="course-meta">7/21 bài học • 33% hoàn thành</p>
+                <div class="course-progress">
+                  <div class="progress-bar-small">
+                    <div class="progress-fill" style="width: 33%"></div>
+                  </div>
+                </div>
+                <div class="course-actions">
+                  <a href="lesson-viewer.html?lesson=7" class="btn-continue">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                    Tiếp tục học: Ngày 7
+                  </a>
+                  <a href="course-detail.html" class="btn-view">Xem chi tiết</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Locked Course (Coming Soon) -->
+            <div class="course-card locked">
+              <div class="course-thumbnail">
+                <img
+                  src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=600&h=400&fit=crop"
+                  alt="Course"
+                />
+                <div class="course-badge locked-badge">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                  Chưa mở khóa
+                </div>
+              </div>
+              <div class="course-info">
+                <h3>Thiết lập ranh giới khỏe mạnh</h3>
+                <p class="course-meta">15 bài học • 4 tuần</p>
+                <div class="course-actions">
+                  <a href="courses.html" class="btn-unlock">
+                    Đăng ký khóa học
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section class="recent-activity">
+          <h2>Hoạt động gần đây</h2>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon completed">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </div>
+              <div class="activity-content">
+                <h4>Hoàn thành bài học</h4>
+                <p>Ngày 7: Ôn tập tuần 1 & Kế hoạch hành động</p>
+                <span class="activity-time">2 giờ trước</span>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon completed">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </div>
+              <div class="activity-content">
+                <h4>Hoàn thành bài học</h4>
+                <p>Ngày 6: Journaling - Viết ra lo âu của bạn</p>
+                <span class="activity-time">1 ngày trước</span>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon achievement">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                  />
+                </svg>
+              </div>
+              <div class="activity-content">
+                <h4>Nhận thành tựu mới</h4>
+                <p>🎉 Hoàn thành Tuần 1 - Keep it up!</p>
+                <span class="activity-time">1 ngày trước</span>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <div class="activity-icon journal">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg>
+              </div>
+              <div class="activity-content">
+                <h4>Viết journal mới</h4>
+                <p>Hoàn thành bài journaling Ngày 6</p>
+                <span class="activity-time">2 ngày trước</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+          <h2>Công cụ học tập</h2>
+          <div class="actions-grid">
+            <a href="course-resources.html" class="action-card">
+              <div class="action-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg>
+              </div>
+              <h3>Workbook PDF</h3>
+              <p>Download tài liệu học tập</p>
+            </a>
+
+            <a href="#" class="action-card">
+              <div class="action-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="10 8 16 12 10 16 10 8" />
+                </svg>
+              </div>
+              <h3>Audio thiền</h3>
+              <p>21 audio thiền dẫn</p>
+            </a>
+
+            <a href="#" class="action-card">
+              <div class="action-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                  />
+                </svg>
+              </div>
+              <h3>Nhóm Telegram</h3>
+              <p>Tham gia cộng đồng</p>
+            </a>
+
+            <a href="#" class="action-card">
+              <div class="action-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </div>
+              <h3>Chứng chỉ</h3>
+              <p>Xem tiến độ chứng chỉ</p>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/student-portal.js"></script>
+  </body>
+</html>

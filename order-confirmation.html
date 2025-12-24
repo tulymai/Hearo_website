@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký thành công - Hearo Podcast</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/enrollment.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="confirmation-main">
+      <div class="container">
+        <div class="confirmation-wrapper">
+          <!-- Success Icon -->
+          <div class="success-icon">
+            <svg
+              width="80"
+              height="80"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+          </div>
+
+          <h1>Đăng ký thành công! 🎉</h1>
+          <p class="confirmation-subtitle">
+            Cảm ơn bạn đã tin tưởng Hearo Podcast. Chúng tôi đã gửi email xác
+            nhận và hướng dẫn truy cập khóa học.
+          </p>
+
+          <!-- Order Details -->
+          <div class="order-details">
+            <h3>Thông tin đơn hàng</h3>
+            <div class="detail-row">
+              <span>Mã đơn hàng:</span>
+              <strong id="order-id">HRO-20251224-001</strong>
+            </div>
+            <div class="detail-row">
+              <span>Khóa học:</span>
+              <strong id="confirmed-course">21 ngày quản lý lo âu</strong>
+            </div>
+            <div class="detail-row">
+              <span>Giá:</span>
+              <strong id="confirmed-price">499.000₫</strong>
+            </div>
+            <div class="detail-row">
+              <span>Ngày đăng ký:</span>
+              <strong id="order-date">24/12/2025</strong>
+            </div>
+            <div class="detail-row">
+              <span>Email:</span>
+              <strong id="confirmed-email">email@example.com</strong>
+            </div>
+          </div>
+          <!-- Sau phần order details, thêm: -->
+          <section class="next-steps">
+            <div class="container">
+              <h2>🎉 Bước tiếp theo</h2>
+              <div class="steps-grid">
+                <div class="step-card">
+                  <div class="step-number">1</div>
+                  <h3>Truy cập Dashboard</h3>
+                  <p>Xem tiến độ và quản lý khóa học của bạn</p>
+                  <a href="student-portal.html" class="btn-step">
+                    Đi tới Dashboard
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="step-card">
+                  <div class="step-number">2</div>
+                  <h3>Bắt đầu học Ngày 1</h3>
+                  <p>Tìm hiểu lo âu là gì và tại sao bạn lo âu</p>
+                  <a href="lesson-viewer.html?lesson=1" class="btn-step">
+                    Bắt đầu học ngay
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="step-card">
+                  <div class="step-number">3</div>
+                  <h3>Download tài liệu</h3>
+                  <p>Workbook, checklist và audio thiền</p>
+                  <a href="course-resources.html" class="btn-step">
+                    Xem tài liệu
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <style>
+            .next-steps {
+              padding: 60px 0;
+              background: radial-gradient(
+                circle at center,
+                rgba(34, 197, 94, 0.1),
+                transparent 70%
+              );
+            }
+
+            .next-steps h2 {
+              text-align: center;
+              font-size: 2.5rem;
+              margin-bottom: 48px;
+              color: #f0fdf4;
+            }
+
+            .steps-grid {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 32px;
+            }
+
+            .step-card {
+              padding: 40px 32px;
+              background: var(--card);
+              border: 1px solid rgba(34, 197, 94, 0.2);
+              border-radius: 20px;
+              text-align: center;
+              transition: all 0.3s;
+            }
+
+            .step-card:hover {
+              border-color: rgba(34, 197, 94, 0.4);
+              transform: translateY(-4px);
+              box-shadow: 0 12px 32px rgba(34, 197, 94, 0.2);
+            }
+
+            .step-number {
+              width: 64px;
+              height: 64px;
+              margin: 0 auto 24px;
+              background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--accent)
+              );
+              color: #022c22;
+              font-size: 2rem;
+              font-weight: 700;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .step-card h3 {
+              font-size: 1.5rem;
+              margin-bottom: 12px;
+              color: #f0fdf4;
+            }
+
+            .step-card p {
+              font-size: 1rem;
+              color: var(--muted);
+              margin-bottom: 24px;
+              line-height: 1.6;
+            }
+
+            .btn-step {
+              display: inline-flex;
+              align-items: center;
+              gap: 8px;
+              padding: 12px 24px;
+              background: rgba(34, 197, 94, 0.1);
+              color: var(--primary);
+              border: 1px solid rgba(34, 197, 94, 0.3);
+              border-radius: 10px;
+              text-decoration: none;
+              font-weight: 600;
+              transition: all 0.3s;
+            }
+
+            .btn-step:hover {
+              background: rgba(34, 197, 94, 0.2);
+              transform: translateY(-2px);
+            }
+
+            @media (max-width: 968px) {
+              .steps-grid {
+                grid-template-columns: 1fr;
+              }
+            }
+          </style>
+
+          <!-- Next Steps -->
+          <div class="next-steps">
+            <h3>Các bước tiếp theo</h3>
+            <div class="step-item">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Kiểm tra email</h4>
+                <p>
+                  Chúng tôi đã gửi email kích hoạt tài khoản và link truy cập
+                  khóa học
+                </p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Tham gia nhóm Telegram</h4>
+                <p>
+                  Tham gia cộng đồng học viên để nhận hỗ trợ và chia sẻ kinh
+                  nghiệm
+                </p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>Bắt đầu học ngay</h4>
+                <p>Truy cập khóa học và bắt đầu hành trình chữa lành của bạn</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="confirmation-actions">
+            <a href="student-portal.html" class="btn-primary">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M23 7l-7 5 7 5V7z" />
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+              </svg>
+              Bắt đầu học ngay
+            </a>
+            <a href="courses.html" class="btn-secondary">Xem khóa học khác</a>
+          </div>
+
+          <!-- Support -->
+          <div class="support-box">
+            <h4>Cần hỗ trợ?</h4>
+            <p>
+              Liên hệ:
+              <a href="mailto:support@hearopodcast.com"
+                >support@hearopodcast.com</a
+              >
+              hoặc hotline <strong>1800-6013</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script>
+      // Auto-populate order info from localStorage
+      window.addEventListener("DOMContentLoaded", () => {
+        const orderData = JSON.parse(localStorage.getItem("orderData") || "{}");
+
+        if (orderData.courseName) {
+          document.getElementById("confirmed-course").textContent =
+            orderData.courseName;
+        }
+        if (orderData.price) {
+          document.getElementById("confirmed-price").textContent =
+            orderData.price;
+        }
+        if (orderData.email) {
+          document.getElementById("confirmed-email").textContent =
+            orderData.email;
+        }
+
+        // Generate order ID
+        const orderId =
+          "HRO-" +
+          new Date().toISOString().slice(0, 10).replace(/-/g, "") +
+          "-" +
+          Math.floor(Math.random() * 1000);
+        document.getElementById("order-id").textContent = orderId;
+
+        // Set order date
+        const today = new Date().toLocaleDateString("vi-VN");
+        document.getElementById("order-date").textContent = today;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký khóa học - Hearo Podcast</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/enrollment.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="enrollment-main">
+      <div class="container">
+        <div class="enrollment-wrapper">
+          <!-- Left: Course Info -->
+          <div class="enrollment-info">
+            <span class="eyebrow">Đăng ký khóa học</span>
+            <h1 id="course-title">21 ngày quản lý lo âu</h1>
+            <p class="course-subtitle">không dùng thuốc</p>
+
+            <div class="course-summary">
+              <div class="summary-item">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M23 7l-7 5 7 5V7z" />
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                </svg>
+                <span>21 video bài giảng (10-15 phút)</span>
+              </div>
+              <div class="summary-item">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="10 8 16 12 10 16 10 8" />
+                </svg>
+                <span>21 audio thiền dẫn</span>
+              </div>
+              <div class="summary-item">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg>
+                <span>Workbook PDF & journaling</span>
+              </div>
+              <div class="summary-item">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                  />
+                </svg>
+                <span>Nhóm Telegram riêng</span>
+              </div>
+              <div class="summary-item">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                <span>Chứng chỉ hoàn thành</span>
+              </div>
+            </div>
+
+            <div class="price-box">
+              <div class="price-row">
+                <span class="price-label">Giá khóa học:</span>
+                <span class="price-value" id="course-price">499.000₫</span>
+              </div>
+              <div class="price-note">✓ Học trọn đời, không thời hạn</div>
+              <div class="price-note">✓ Hoàn tiền 100% trong 7 ngày đầu</div>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="enrollment-form-wrapper">
+            <form id="enrollment-form" class="enrollment-form">
+              <h2>Thông tin đăng ký</h2>
+
+              <div class="form-group">
+                <label for="fullname"
+                  >Họ và tên <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="fullname"
+                  name="fullname"
+                  required
+                  placeholder="Nguyễn Văn A"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="email@example.com"
+                />
+                <small>Thông tin khóa học sẽ được gửi đến email này</small>
+              </div>
+
+              <div class="form-group">
+                <label for="phone"
+                  >Số điện thoại <span class="required">*</span></label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="0901234567"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="reason"
+                  >Tại sao bạn muốn tham gia khóa học này?</label
+                >
+                <textarea
+                  id="reason"
+                  name="reason"
+                  rows="3"
+                  placeholder="Chia sẻ một chút về mục tiêu của bạn..."
+                ></textarea>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="terms" name="terms" required />
+                  <span
+                    >Tôi đồng ý với <a href="#">Điều khoản sử dụng</a> và
+                    <a href="#">Chính sách bảo mật</a></span
+                  >
+                </label>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    id="newsletter"
+                    name="newsletter"
+                    checked
+                  />
+                  <span
+                    >Nhận email về các khóa học và tips chăm sóc sức khỏe tinh
+                    thần</span
+                  >
+                </label>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                Tiếp tục thanh toán
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+
+              <p class="security-note">
+                🔒 Thông tin của bạn được bảo mật tuyệt đối
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/enrollment.js"></script>
+  </body>
+</html>

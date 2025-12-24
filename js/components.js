@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   setTimeout(() => {
     setActiveNavLink();
     initializeHeader();
-    initializeFooterForms(); // Thêm: Handle footer newsletter
+    updateHeaderLoginState(); // THÊM: Cập nhật trạng thái đăng nhập
+    initializeFooterForms();
   }, 100);
 });
 
@@ -23,6 +24,7 @@ async function loadComponents() {
       }
       const headerHTML = await headerResponse.text();
       headerPlaceholder.innerHTML = headerHTML;
+      console.log("✅ Header loaded");
     }
 
     // Load footer
@@ -34,10 +36,10 @@ async function loadComponents() {
       }
       const footerHTML = await footerResponse.text();
       footerPlaceholder.innerHTML = footerHTML;
+      console.log("✅ Footer loaded");
     }
   } catch (error) {
-    console.error("Error loading components:", error);
-    // Fallback: Show error message to user
+    console.error("❌ Error loading components:", error);
     showComponentError();
   }
 }
@@ -62,17 +64,68 @@ function setActiveNavLink() {
     if (link.dataset.page === currentPage) {
       link.classList.add("active");
     } else {
-      link.classList.remove("active"); // Remove để tránh conflict
+      link.classList.remove("active");
     }
   });
 }
-
 // Lấy tên trang hiện tại từ URL
 function getCurrentPage() {
   const path = window.location.pathname;
   const page = path.split("/").pop().replace(".html", "").replace("/", "");
   return page || "index";
 }
+
+// Check & update header login state
+function updateHeaderLoginState() {
+  const userData = localStorage.getItem("userData");
+  const orderData = localStorage.getItem("orderData");
+
+  const avatarImg = document.getElementById("headerAvatarImg");
+  const avatarLink = document.getElementById("headerAvatarLink");
+  const authText = document.getElementById("headerAuthText");
+
+  console.log("🔍 Checking login state...");
+  console.log("userData:", userData);
+  console.log("orderData:", orderData);
+
+  const isLoggedIn = !!(userData || orderData);
+  const defaultAvatar = "https://cdn-icons-png.flaticon.com/512/847/847969.png";
+
+  if (isLoggedIn) {
+    // ĐÃ ĐĂNG NHẬP
+    const data = JSON.parse(userData || orderData || "{}");
+    const savedAvatar = "https://i.pravatar.cc/80?img=5";
+    const avatarSrc = savedAvatar || defaultAvatar;
+
+    if (avatarImg) avatarImg.src = avatarSrc;
+    if (avatarLink) avatarLink.href = "student-profile.html";
+    if (authText) authText.style.display = "none";
+  } else {
+    // CHƯA ĐĂNG NHẬP
+    if (avatarImg) avatarImg.src = defaultAvatar;
+    if (avatarLink) avatarLink.href = "login.html";
+    if (authText) authText.style.display = "flex";
+  }
+}
+
+// Make function globally accessible (chỉ để 1 lần)
+window.updateHeaderLoginState = updateHeaderLoginState;
+
+// THÊM: Listen for storage changes
+window.addEventListener("storage", (e) => {
+  if (e.key === "userData" || e.key === "orderData") {
+    console.log("🔄 Storage changed, updating header...");
+    updateHeaderLoginState();
+  }
+});
+
+// THÊM: Listen for custom login event
+window.addEventListener("userLoggedIn", () => {
+  console.log("🎉 User logged in event received");
+  setTimeout(() => {
+    updateHeaderLoginState();
+  }, 100);
+});
 
 // Initialize header features sau khi load xong
 function initializeHeader() {
@@ -103,6 +156,25 @@ function initializeHeader() {
         mainNav.classList.remove("active");
         hamburger.classList.remove("active");
         document.body.classList.remove("menu-open");
+      }
+    });
+  }
+
+  // THÊM: Initialize dropdown toggle
+  const userAvatar = document.querySelector(".header-user-avatar");
+  const userDropdown = document.getElementById("headerUserDropdown");
+
+  if (userAvatar && userDropdown) {
+    // Toggle dropdown
+    userAvatar.addEventListener("click", (e) => {
+      e.stopPropagation();
+      userDropdown.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!userAvatar.contains(e.target) && !userDropdown.contains(e.target)) {
+        userDropdown.classList.remove("active");
       }
     });
   }
@@ -179,6 +251,44 @@ function initializeFooterForms() {
   }
 }
 
+// THÊM: Handle logout from header
+window.handleHeaderLogout = function (event) {
+  event.preventDefault();
+
+  const confirmed = confirm("Bạn có chắc chắn muốn đăng xuất?");
+
+  if (confirmed) {
+    console.log("🚪 Logging out...");
+
+    // Clear all user data
+    localStorage.removeItem("userData");
+    localStorage.removeItem("orderData");
+    localStorage.removeItem("courseProgress");
+    localStorage.removeItem("userAvatar");
+    localStorage.removeItem("registeredUser");
+    localStorage.removeItem("rememberMe");
+
+    // Update UI
+    updateHeaderLoginState();
+
+    alert("✅ Đã đăng xuất thành công!");
+
+    // Redirect to home
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 500);
+  }
+};
+
+// THÊM: Toggle dropdown (make it globally accessible)
+window.toggleHeaderUserDropdown = function (event) {
+  event.stopPropagation();
+  const dropdown = document.getElementById("headerUserDropdown");
+  if (dropdown) {
+    dropdown.classList.toggle("active");
+  }
+};
+
 // Keyboard accessibility
 document.addEventListener("keydown", (e) => {
   const mainNav = document.getElementById("mainNav");
@@ -188,6 +298,16 @@ document.addEventListener("keydown", (e) => {
     mainNav.classList.remove("active");
     if (hamburger) hamburger.classList.remove("active");
     document.body.classList.remove("menu-open");
+  }
+
+  // THÊM: Close dropdown on Escape
+  const userDropdown = document.getElementById("headerUserDropdown");
+  if (
+    e.key === "Escape" &&
+    userDropdown &&
+    userDropdown.classList.contains("active")
+  ) {
+    userDropdown.classList.remove("active");
   }
 });
 

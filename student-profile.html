@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang cá nhân - Hearo Podcast</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/student-profile.css" />
+  </head>
+  <body data-page="profile">
+    <div id="header-placeholder"></div>
+    <div id="student-nav-placeholder"></div>
+
+    <main class="profile-main">
+      <div class="container">
+        <div class="profile-layout">
+          <!-- Sidebar -->
+          <aside class="profile-sidebar">
+            <div class="profile-menu">
+              <a
+                href="#overview"
+                class="menu-item active"
+                onclick="showTab(event, 'overview')"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                <span>Thông tin cá nhân</span>
+              </a>
+
+              <a
+                href="#courses"
+                class="menu-item"
+                onclick="showTab(event, 'courses')"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+                <span>Khóa học của tôi</span>
+              </a>
+
+              <a
+                href="#certificates"
+                class="menu-item"
+                onclick="showTab(event, 'certificates')"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                <span>Chứng chỉ</span>
+              </a>
+
+              <a
+                href="#billing"
+                class="menu-item"
+                onclick="showTab(event, 'billing')"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                  <line x1="1" y1="10" x2="23" y2="10" />
+                </svg>
+                <span>Lịch sử thanh toán</span>
+              </a>
+
+              <a
+                href="#settings"
+                class="menu-item"
+                onclick="showTab(event, 'settings')"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M12 1v6m0 6v6m5.66-13.66l-4.24 4.24m0 6.36l4.24 4.24M23 12h-6m-6 0H1m18.36-5.66l-4.24 4.24m-6.36 0l-4.24-4.24"
+                  />
+                </svg>
+                <span>Cài đặt</span>
+              </a>
+            </div>
+            <button class="btn-logout" id="btnLogout">Đăng xuất</button>
+          </aside>
+
+          <!-- Main Content -->
+          <div class="profile-content">
+            <!-- Overview Tab -->
+            <div id="tab-overview" class="tab-content active">
+              <div class="content-header">
+                <h1>Thông tin cá nhân</h1>
+                <button class="btn-edit" onclick="toggleEdit()">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                    />
+                    <path
+                      d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                    />
+                  </svg>
+                  <span>Chỉnh sửa</span>
+                </button>
+              </div>
+
+              <div class="profile-card">
+                <div class="profile-header">
+                  <div class="avatar-section">
+                    <img
+                      src="https://i.pravatar.cc/150?img=5"
+                      alt="Avatar"
+                      class="profile-avatar"
+                      id="profileAvatar"
+                    />
+                    <button class="btn-change-avatar" onclick="changeAvatar()">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+                        />
+                        <circle cx="12" cy="13" r="4" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="profile-info">
+                    <h2>Từ Lý Mai</h2>
+                    <p>23520912@gm.uit.edu.vn</p>
+                    <div class="badges">
+                      <span class="badge premium">Premium</span>
+                      <span class="badge streak">🔥 7 ngày streak</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="profile-form">
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label>Họ và tên</label>
+                      <input
+                        type="text"
+                        value="Từ Lý Mai"
+                        disabled
+                        id="fullname"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input
+                        type="email"
+                        value="23520912@gm.uit.edu.vn"
+                        disabled
+                        id="email"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label>Số điện thoại</label>
+                      <input
+                        type="tel"
+                        value="0337764520"
+                        disabled
+                        id="phone"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label>Ngày sinh</label>
+                      <input type="date" value="2005-03-16" disabled id="dob" />
+                    </div>
+
+                    <div class="form-group full-width">
+                      <label>Địa chỉ</label>
+                      <input
+                        type="text"
+                        value="Quận 1, TP. Hồ Chí Minh"
+                        disabled
+                        id="address"
+                      />
+                    </div>
+
+                    <div class="form-group full-width">
+                      <label>Bio</label>
+                      <textarea rows="3" disabled id="bio">
+Yêu thích tìm hiểu về sức khỏe tinh thần và phát triển bản thân.</textarea
+                      >
+                    </div>
+                  </div>
+
+                  <div
+                    class="form-actions"
+                    style="display: none"
+                    id="formActions"
+                  >
+                    <button class="btn-cancel" onclick="cancelEdit()">
+                      Hủy
+                    </button>
+                    <button class="btn-save" onclick="saveProfile()">
+                      Lưu thay đổi
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stats -->
+              <div class="stats-section">
+                <h3>Thống kê học tập</h3>
+                <div class="stats-grid">
+                  <div class="stat-card">
+                    <div class="stat-icon">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                      </svg>
+                    </div>
+                    <div class="stat-info">
+                      <span class="stat-number">3</span>
+                      <span class="stat-label">Khóa học</span>
+                    </div>
+                  </div>
+
+                  <div class="stat-card">
+                    <div class="stat-icon">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                      </svg>
+                    </div>
+                    <div class="stat-info">
+                      <span class="stat-number">7</span>
+                      <span class="stat-label">Bài hoàn thành</span>
+                    </div>
+                  </div>
+
+                  <div class="stat-card">
+                    <div class="stat-icon">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                      </svg>
+                    </div>
+                    <div class="stat-info">
+                      <span class="stat-number">2h 45m</span>
+                      <span class="stat-label">Thời gian học</span>
+                    </div>
+                  </div>
+
+                  <div class="stat-card">
+                    <div class="stat-icon">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="stat-info">
+                      <span class="stat-number">1</span>
+                      <span class="stat-label">Chứng chỉ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Courses Tab -->
+            <div id="tab-courses" class="tab-content">
+              <div class="content-header">
+                <h1>Khóa học của tôi</h1>
+                <a href="courses.html" class="btn-browse">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.35-4.35" />
+                  </svg>
+                  Khám phá thêm
+                </a>
+              </div>
+
+              <div class="courses-list">
+                <!-- Active Course -->
+                <div class="course-item active">
+                  <div class="course-thumbnail">
+                    <img
+                      src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=400&h=250&fit=crop"
+                      alt="Course"
+                    />
+                    <span class="course-status active">Đang học</span>
+                  </div>
+                  <div class="course-details">
+                    <h3>21 ngày quản lý lo âu không dùng thuốc</h3>
+                    <p class="course-instructor">ThS. Nguyễn Minh Anh</p>
+                    <div class="course-progress-bar">
+                      <div class="progress-fill" style="width: 33%"></div>
+                    </div>
+                    <div class="course-meta">
+                      <span>7/21 bài • 33%</span>
+                      <span class="enrolled-date">Bắt đầu: 17/12/2024</span>
+                    </div>
+                    <div class="course-actions">
+                      <a
+                        href="lesson-viewer.html?lesson=7"
+                        class="btn-continue-course"
+                      >
+                        Tiếp tục học
+                      </a>
+                      <a href="course-resources.html" class="btn-resources">
+                        Tài liệu
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Completed Course -->
+                <div class="course-item completed">
+                  <div class="course-thumbnail">
+                    <img
+                      src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=250&fit=crop"
+                      alt="Course"
+                    />
+                    <span class="course-status completed">Hoàn thành</span>
+                  </div>
+                  <div class="course-details">
+                    <h3>Mindfulness cho người bận rộn</h3>
+                    <p class="course-instructor">ThS. Trần Văn An</p>
+                    <div class="course-progress-bar">
+                      <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                    <div class="course-meta">
+                      <span>14/14 bài • 100%</span>
+                      <span class="enrolled-date">Hoàn thành: 15/12/2024</span>
+                    </div>
+                    <div class="course-actions">
+                      <a href="#" class="btn-certificate">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                          <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                        Xem chứng chỉ
+                      </a>
+                      <a href="#" class="btn-review-course"> Đánh giá </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Locked Course -->
+                <div class="course-item locked">
+                  <div class="course-thumbnail">
+                    <img
+                      src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400&h=250&fit=crop"
+                      alt="Course"
+                    />
+                    <span class="course-status locked">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <rect
+                          x="3"
+                          y="11"
+                          width="18"
+                          height="11"
+                          rx="2"
+                          ry="2"
+                        />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                      </svg>
+                      Chưa mở
+                    </span>
+                  </div>
+                  <div class="course-details">
+                    <h3>Thiết lập ranh giới khỏe mạnh</h3>
+                    <p class="course-instructor">ThS. Lê Thị Bình</p>
+                    <div class="course-meta">
+                      <span>15 bài • 4 tuần</span>
+                      <span class="price">299.000₫</span>
+                    </div>
+                    <div class="course-actions">
+                      <a href="course-detail.html" class="btn-unlock-course">
+                        Đăng ký ngay
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificates Tab -->
+            <div id="tab-certificates" class="tab-content">
+              <div class="content-header">
+                <h1>Chứng chỉ của tôi</h1>
+              </div>
+
+              <div class="certificates-grid">
+                <div class="certificate-card">
+                  <div class="certificate-preview">
+                    <div class="certificate-content">
+                      <div class="cert-badge">
+                        <svg
+                          width="48"
+                          height="48"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                          <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                      </div>
+                      <h3>Certificate of Completion</h3>
+                      <h2>Mindfulness cho người bận rộn</h2>
+                      <p>Từ Lý Mai</p>
+                      <span class="cert-date">15/12/2024</span>
+                    </div>
+                  </div>
+                  <div class="certificate-actions">
+                    <button
+                      class="btn-download-cert"
+                      onclick="downloadCertificate('cert1')"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                      </svg>
+                      Download
+                    </button>
+                    <button
+                      class="btn-share-cert"
+                      onclick="shareCertificate('cert1')"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle cx="18" cy="5" r="3" />
+                        <circle cx="6" cy="12" r="3" />
+                        <circle cx="18" cy="19" r="3" />
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                      </svg>
+                      Chia sẻ
+                    </button>
+                  </div>
+                </div>
+
+                <div class="certificate-card placeholder">
+                  <div class="certificate-preview empty">
+                    <svg
+                      width="64"
+                      height="64"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    <p>Hoàn thành khóa học để nhận chứng chỉ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Billing Tab -->
+            <div id="tab-billing" class="tab-content">
+              <div class="content-header">
+                <h1>Lịch sử thanh toán</h1>
+              </div>
+
+              <div class="billing-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Mã đơn</th>
+                      <th>Khóa học</th>
+                      <th>Ngày</th>
+                      <th>Phương thức</th>
+                      <th>Số tiền</th>
+                      <th>Trạng thái</th>
+                      <th>Hành động</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>#ORD-20241217-001</strong></td>
+                      <td>21 ngày quản lý lo âu</td>
+                      <td>17/12/2024</td>
+                      <td>
+                        <span class="payment-method">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <rect
+                              x="1"
+                              y="4"
+                              width="22"
+                              height="16"
+                              rx="2"
+                              ry="2"
+                            />
+                            <line x1="1" y1="10" x2="23" y2="10" />
+                          </svg>
+                          Thẻ tín dụng
+                        </span>
+                      </td>
+                      <td><strong>299.000₫</strong></td>
+                      <td><span class="status success">Thành công</span></td>
+                      <td>
+                        <button
+                          class="btn-invoice"
+                          onclick="downloadInvoice('ORD-20241217-001')"
+                        >
+                          Hóa đơn
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>#ORD-20241201-002</strong></td>
+                      <td>Mindfulness cho người bận rộn</td>
+                      <td>01/12/2024</td>
+                      <td>
+                        <span class="payment-method">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" />
+                          </svg>
+                          Chuyển khoản
+                        </span>
+                      </td>
+                      <td><strong>199.000₫</strong></td>
+                      <td><span class="status success">Thành công</span></td>
+                      <td>
+                        <button
+                          class="btn-invoice"
+                          onclick="downloadInvoice('ORD-20241201-002')"
+                        >
+                          Hóa đơn
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Settings Tab -->
+            <div id="tab-settings" class="tab-content">
+              <div class="content-header">
+                <h1>Cài đặt tài khoản</h1>
+              </div>
+
+              <div class="settings-sections">
+                <!-- Change Password -->
+                <div class="settings-card">
+                  <h3>Đổi mật khẩu</h3>
+                  <div class="form-group">
+                    <label>Mật khẩu hiện tại</label>
+                    <input
+                      type="password"
+                      placeholder="Nhập mật khẩu hiện tại"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>Mật khẩu mới</label>
+                    <input type="password" placeholder="Nhập mật khẩu mới" />
+                  </div>
+                  <div class="form-group">
+                    <label>Xác nhận mật khẩu mới</label>
+                    <input
+                      type="password"
+                      placeholder="Nhập lại mật khẩu mới"
+                    />
+                  </div>
+                  <button class="btn-update" onclick="changePassword()">
+                    Cập nhật mật khẩu
+                  </button>
+                </div>
+
+                <!-- Notifications -->
+                <div class="settings-card">
+                  <h3>Thông báo</h3>
+                  <div class="settings-toggle">
+                    <label>
+                      <input type="checkbox" checked />
+                      <span class="toggle-slider"></span>
+                      <span class="toggle-label"
+                        >Email thông báo khóa học mới</span
+                      >
+                    </label>
+                  </div>
+                  <div class="settings-toggle">
+                    <label>
+                      <input type="checkbox" checked />
+                      <span class="toggle-slider"></span>
+                      <span class="toggle-label">Nhắc nhở học hàng ngày</span>
+                    </label>
+                  </div>
+                  <div class="settings-toggle">
+                    <label>
+                      <input type="checkbox" />
+                      <span class="toggle-slider"></span>
+                      <span class="toggle-label">Newsletter hàng tuần</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Danger Zone -->
+                <div class="settings-card danger">
+                  <h3>Vùng nguy hiểm</h3>
+                  <p>Các hành động này không thể hoàn tác</p>
+                  <button class="btn-danger" onclick="confirmDeleteAccount()">
+                    Xóa tài khoản
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/student-profile.js"></script>
+  </body>
+</html>
